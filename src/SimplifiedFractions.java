@@ -13,7 +13,7 @@ public class SimplifiedFractions {
                     // if(i > j) break;
                     String fraction = i + "/" + j;
                     String simplified = simplify(fraction);
-                    if (!simplified.equals("1")) {
+                    if (!"1".equals(simplified)) {
                         if (!fractions.contains(simplified)) {
                             fractions.add(simplified);
                         }
@@ -25,7 +25,7 @@ public class SimplifiedFractions {
     }
 
     private static String simplify (String fraction) {
-        if (fraction.equals("4/8")) {
+        if ("4/8".equals(fraction)) {
             System.out.println("");
         }
         String[] separated = fraction.split("/");
