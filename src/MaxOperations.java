@@ -29,12 +29,18 @@ public class MaxOperations {
             if(map.containsKey(an)){ // if there is a number to satisfy the condition
                 count++; // update the answer
                 if(map.get(an)==1) // if there is only 1 ouccerence of the element
-                    map.remove(an); // remove it from the map
+                    {
+                        map.remove(an);
+                    }
                 else
-                    map.put(an,map.get(an)-1); // or decrease its value
+                    {
+                        map.put(an,map.get(an)-1);
+                    } // or decrease its value
             }
             else
-                map.put(nums[i],map.getOrDefault(nums[i],0)+1);// if element not present then add it in map
+                {
+                    map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+                }// if element not present then add it in map
         }
         return count;
     }
