@@ -27,7 +27,7 @@ public class MaximumBinaryString {
     private static String apply00 (String binary) {
         for (int i = 0; i < binary.length() -2 ; i++){
             String sub = binary.substring(i,i+2);
-            if(sub.equals("00")){
+            if("00".equals(sub)){
                 String ret = binary.substring(0,i) + "10"+binary.substring(i+2,binary.length());
                 return ret;
             }

@@ -8,7 +8,7 @@ public class RearrangeWords {
             String currMin = "";
             int k = -1;
             for (int j = 0; j < words.length; j++) {
-                if(!words[j].equals("")) {
+                if(!"".equals(words[j])) {
                     if (min > words[j].length()) {
                         currMin = words[j];
                         min = words[j].length();

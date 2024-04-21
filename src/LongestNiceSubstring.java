@@ -6,7 +6,7 @@ import java.util.Set;
 public class LongestNiceSubstring {
 
     public String longestNiceSubstring(String s) {
-        if(s == null || s.equals("") || s.length() < 2)
+        if(s == null || "".equals(s) || s.length() < 2)
             return "";
         List<String> subStrings = new ArrayList<>();
         for (int i = 0; i < s.length(); i++) {

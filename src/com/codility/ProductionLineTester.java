@@ -17,8 +17,8 @@ public class ProductionLineTester {
                 new ProductLineTestReport(0, 0, 0, 0);
         if(products != null && products.findAny().isPresent()) {
             products.filter(product -> product != null
-                    && product.getStatus()
-                    .equalsIgnoreCase("invalid"))
+                    && "invalid"
+                    .equalsIgnoreCase(product.getStatus()))
                     .skip(10).limit(20)
                     .forEach(product -> {
                         try {
